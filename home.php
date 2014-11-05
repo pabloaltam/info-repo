@@ -8,9 +8,11 @@ if(!$_SESSION){
 	alert("usuario no autentificado")
 	self.location="index.html"
 	</script>';
-}else {
+}
 $id_user=$_SESSION["id_user"];
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,6 +61,3 @@ $id_user=$_SESSION["id_user"];
 		</div>
 	</body>
 </html>
-<?php
-} 
- ?>
