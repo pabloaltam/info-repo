@@ -26,6 +26,11 @@ $fila=mysql_fetch_array($resultado);
 	}else{
 	$_SESSION['id_user']= $fila['id_user'];
 	$_SESSION['email']=$fila['email'];
+	$_SESSION['nombre']=$fila['nombre'];
+	$_SESSION['apellidos']=$fila['apellidos'];
+	$_SESSION['fecha_creacion']=$fila['fecha_creacion'];
+	$_SESSION['fecha_nacimiento']=$fila['fecha_nacimiento'];
+	$_SESSION['perfil_usuario']=$fila['perfil_usuario'];
 
 		header("Location: home.php");
 	}
