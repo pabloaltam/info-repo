@@ -59,7 +59,7 @@ if(!$_SESSION){
 
 			<div>
 				<table border="0" cellspacing="5" cellpadding="5">
-					<tr><th>Variable</th><td>contenido</td></tr>
+					<tr><th>Variable</th><td>Contenido</td></tr>
 					<tr><th>id_user</th><td><?php echo "$id_user";?></td></tr>
 					<tr><th>nombre</th><td><?php echo "$nombre";?></td></tr>
 					<tr><th>apellidos</th><td><?php echo "$apellidos";?></td></tr>
@@ -68,6 +68,18 @@ if(!$_SESSION){
 					<tr><th>fecha_nacimiento</th><td><?php echo "$fecha_nacimiento";?></td></tr>
 					<tr><th>fecha_creacion</th><td><?php echo "$fecha_creacion";?></td></tr>
 				</table>
+				<hr/>
+				<?php 
+				
+				if ($perfil_usuario=="admin") {
+					?>
+					<div>Opciones para los administradores</div><hr/>
+					<?php 
+				} else {
+					
+				}
+				
+				 ?>
 				
 			</div>
 
