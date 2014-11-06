@@ -50,10 +50,10 @@ if(!$_SESSION){
 			</header>
 			<nav>
 				<p>
-					<a href="/">Home</a>
+					<a href="home.php">Home</a>
 				</p>
 				<p>
-					<a href="/contact">Contact</a>
+					<a href="contacto.html">Contact</a>
 				</p>
 			</nav>
 
