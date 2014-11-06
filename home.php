@@ -58,8 +58,8 @@ if(!$_SESSION){
 			</nav>
 
 			<div>
-				<table border="0" cellspacing="5" cellpadding="5">
-					<tr><th>Variable</th><td>Contenido</td></tr>
+				<table border="1" cellspacing="5" cellpadding="5">
+					<tr><th>Variable</th><th>Contenido</th></tr>
 					<tr><th>id_user</th><td><?php echo "$id_user";?></td></tr>
 					<tr><th>nombre</th><td><?php echo "$nombre";?></td></tr>
 					<tr><th>apellidos</th><td><?php echo "$apellidos";?></td></tr>
