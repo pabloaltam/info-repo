@@ -9,13 +9,22 @@ if(!$_SESSION){
 	self.location="index.html"
 	</script>';
 }
-$id_user=$_SESSION["id_user"];
+
+	//VARIABLES DE SESION
+	$id_user			=	$_SESSION["id_user"];
+	$mail				=	$_SESSION['email'];
+	$nombre				=	$_SESSION['nombre'];
+	$apellidos			=	utf8_encode($_SESSION['apellidos']);
+	$fecha_creacion		=	$_SESSION['fecha_creacion'];
+	$fecha_nacimiento	=	$_SESSION['fecha_nacimiento'];
+	$perfil_usuario		=	$_SESSION['perfil_usuario'];
+	
 ?>
 
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
 
@@ -24,7 +33,7 @@ $id_user=$_SESSION["id_user"];
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 		<title>Home</title>
-		<meta name="description" content="">
+		<meta name="description" content="Pagina de perfil de los usuarios de infored.">
 		<meta name="author" content="Victor">
 
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
@@ -49,6 +58,17 @@ $id_user=$_SESSION["id_user"];
 			</nav>
 
 			<div>
+				<table border="0" cellspacing="5" cellpadding="5">
+					<tr><th>Variable</th><td>contenido</td></tr>
+					<tr><th>id_user</th><td><?php echo "$id_user";?></td></tr>
+					<tr><th>nombre</th><td><?php echo "$nombre";?></td></tr>
+					<tr><th>apellidos</th><td><?php echo "$apellidos";?></td></tr>
+					<tr><th>email</th><td><?php echo "$mail";?></td></tr>
+					<tr><th>perfil_usuario</th><td><?php echo "$perfil_usuario";?></td></tr>
+					<tr><th>fecha_nacimiento</th><td><?php echo "$fecha_nacimiento";?></td></tr>
+					<tr><th>fecha_creacion</th><td><?php echo "$fecha_creacion";?></td></tr>
+				</table>
+				
 			</div>
 
 			<footer>
@@ -56,7 +76,7 @@ $id_user=$_SESSION["id_user"];
 					&copy; Copyright  by infored
 					
 				</p>
-				<a href="desconectar.php">Cerrar sesion</a>
+				<a href="desconectar.php">Cerrar sesi&oacute;n</a>
 			</footer>
 		</div>
 	</body>
