@@ -1,17 +1,22 @@
 <?php 
-ini_set("display_errors",0); /*Para que no muestre errores en el navegador*/
+ini_set("display_errors",1); /*Para que no muestre errores en el navegador*/
 /*Se llama a clase-operaciones.php*/
 require_once('../operaciones/clase-operaciones.php'); 
 $obj_usuario= new usuarios();
 
-$nombre = $_POST['txt_nombre'];
-$apellido	= $_POST['txt_apellido'];
-$email		=	$_POST['txt_email'];
-$contraseña = $_POST['txt_contraseña'];
-$perfilUsuario	= $_POST['radio'];
+	$nombre = $_POST['txt_nombre'];
+	$apellido	= $_POST['txt_apellido'];
+	$email		=	$_POST['txt_email'];
+	$contraseña = $_POST['txt_contraseña'];
+	$perfilUsuario	= $_POST['radio'];
 
 try{
-	  $obj_usuario->agregarUsuarios($nombre,$apellido,$email,$contraseña,$perfilUsuario);
+	$obj_usuario->agregarUsuarios($nombre,$apellido,$email,$contraseña,$perfilUsuario);
+	  if($obj_usuario=!0){
+	  	echo "<script>alert('exito!!')</script>";
+	  }else{
+	  	echo "<script>alert('no se ah ingresado')</script>";
+	  }
 	}
 catch(Exception $e){
 	echo "Error : ".$e->getMessage();
@@ -26,5 +31,6 @@ catch(Exception $e){
 </head>
 <a href="../index.html">Continuar </a>
 <body>
+	<h1>Hola :D</h1>
 </body>
 </html>

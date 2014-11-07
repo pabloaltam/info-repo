@@ -31,7 +31,7 @@
     <td>Perfil Usuario</td>
     <td><input type="radio" name="radio" id="rdn_user" value="user" />
       <label for="rdn_user">Usuario 
-        <input type="radio" name="radio" id="rdn_administrador" value="admi" />
+        <input type="radio" name="radio" id="rdn_administrador" value="admin" />
       Administrador</label></td>
   </tr>
   <tr>

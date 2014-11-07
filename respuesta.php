@@ -1,9 +1,9 @@
 <?php
+ini_set("display_errors",1);
+date_default_timezone_set("America/Santiago");
 //*******PAGINA DE PASO***********************//
-$conex = mysql_connect("localhost","root","root")
- or die ("No se pudo realizar la conexion");
-mysql_select_db("u332152429_info",$conex) 
-or die ("ERROR en la base de datos");
+
+require_once('/conexion/conexion.php');
 
 //*******************************************//
 if(!isset($_SESSION)){
@@ -14,8 +14,8 @@ if(!isset($_SESSION)){
 	$pass= $_POST['password'];
 
 $consulta="SELECT * FROM usuarios WHERE email='".$nom."' and password='".$pass."'";
-$resultado=mysql_query($consulta,$conex) or die (mysql_error());
-$fila=mysql_fetch_array($resultado);
+$resultado=mysqli_query($conex ,$consulta) or die (mysql_error());
+$fila=mysqli_fetch_array($resultado);
 //******************************************** 
     
     if(!$fila[0]){
