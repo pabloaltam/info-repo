@@ -25,7 +25,7 @@
   <tr>
     <td>Contraseña</td>
     <td><label for="txt_contraseña"></label>
-      <input type="text" name="txt_contraseña" id="txt_contraseña" /></td>
+      <input type="password" name="txt_contraseña" id="txt_contraseña" /></td>
   </tr>
   <tr>
     <td>Perfil Usuario</td>
