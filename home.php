@@ -16,7 +16,6 @@ if(!$_SESSION){
 	$nombre				=	$_SESSION['nombre'];
 	$apellidos			=	utf8_encode($_SESSION['apellidos']);
 	$fecha_creacion		=	$_SESSION['fecha_creacion'];
-	$fecha_nacimiento	=	$_SESSION['fecha_nacimiento'];
 	$perfil_usuario		=	$_SESSION['perfil_usuario'];
 	
 ?>
@@ -65,7 +64,6 @@ if(!$_SESSION){
 					<tr><th>apellidos</th><td><?php echo "$apellidos";?></td></tr>
 					<tr><th>email</th><td><?php echo "$mail";?></td></tr>
 					<tr><th>perfil_usuario</th><td><?php echo "$perfil_usuario";?></td></tr>
-					<tr><th>fecha_nacimiento</th><td><?php echo "$fecha_nacimiento";?></td></tr>
 					<tr><th>fecha_creacion</th><td><?php echo "$fecha_creacion";?></td></tr>
 				</table>
 				<hr/>
