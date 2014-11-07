@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<form id="form1" name="form1" method="post" action="">
+<form id="form1" name="form1" method="post" action="ejecutar_ingresar.php">
 
 <table width="70%" border="1">
   <tr>

@@ -10,9 +10,11 @@ class usuarios{
 		$nuevo_contraseña	= $contraseña;
 		$nuevo_perfilUsuario	= $perfilUsuario; 
 		
-		include(""); /*Aqui se debe incluir la conexion a la base de datos*/
+		include('../respuesta.php'); /*Aqui se debe incluir la conexion a la base de datos*/
 		
-		$agregar_usuario = ""; /*Cadena sql para ingresar usuario*/
+		$agregar_usuario = "INSERT INTO `u332152429_info`.`usuarios` (`email`, `nombre`, `apellido`, `password`, `perfil_usuario`) VALUES ('$nuevo_email', '$nuevo_nombre', '$nuevo_apellido', '$nuevo_contraseña', '$nuevo_perfilUsuario');"; /*Cadena sql para ingresar usuario*/
+		$resultado_agregar = $conex->query($agregar_usuario);
+		$conex->close();
 		}
 	
 	}
