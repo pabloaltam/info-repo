@@ -11,7 +11,6 @@ if(!$_SESSION){
 }
 
 	//VARIABLES DE SESION
-	$id_user			=	$_SESSION["id_user"];
 	$mail				=	$_SESSION['email'];
 	$nombre				=	$_SESSION['nombre'];
 	$apellidos			=	utf8_encode($_SESSION['apellidos']);
@@ -59,7 +58,6 @@ if(!$_SESSION){
 			<div>
 				<table border="1" cellspacing="5" cellpadding="5">
 					<tr><th>Variable</th><th>Contenido</th></tr>
-					<tr><th>id_user</th><td><?php echo "$id_user";?></td></tr>
 					<tr><th>nombre</th><td><?php echo "$nombre";?></td></tr>
 					<tr><th>apellidos</th><td><?php echo "$apellidos";?></td></tr>
 					<tr><th>email</th><td><?php echo "$mail";?></td></tr>

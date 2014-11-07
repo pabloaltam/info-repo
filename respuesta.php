@@ -24,10 +24,9 @@ $fila=mysql_fetch_array($resultado);
 	self.location = "index.html"
 	</script>'; 
 	}else{
-	$_SESSION['id_user']= $fila['id_user'];
 	$_SESSION['email']=$fila['email'];
 	$_SESSION['nombre']=$fila['nombre'];
-	$_SESSION['apellidos']=$fila['apellidos'];
+	$_SESSION['apellidos']=$fila['apellido'];
 	$_SESSION['fecha_creacion']=$fila['fecha_creacion'];
 	$_SESSION['perfil_usuario']=$fila['perfil_usuario'];
 
