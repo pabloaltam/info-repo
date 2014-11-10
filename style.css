@@ -146,7 +146,9 @@ p {
 }
 #container,
 .inner { margin: 0 auto }
-header { background: #262F37 }
+header {
+    background: #005EA7 
+}
 header h1 { margin: 7px 0 0 }
 #container {
     clear: both;
