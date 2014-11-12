@@ -1,5 +1,5 @@
 <?php
-$conex = mysqli_connect("mysql8.000webhost.com","a2962834_infored","inacap2020","a2962834_infored");
+$conex = mysqli_connect("sql4.freesqldatabase.com","sql457930","vV9!bJ4%","sql457930",3306);
 if ($conex->connect_errno) {
     echo "Fallo al contenctar a MySQL: (" . $conex->connect_errno . ") " . $conex->connect_error;
 }
