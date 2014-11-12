@@ -1,7 +1,6 @@
 <?php
 //Iniciar sesion
 session_start();
-
 //Validar si se esta ingresando con sesion correctamente
 if(!$_SESSION){
 	echo '<script languaje=javascript>
@@ -13,7 +12,7 @@ if(!$_SESSION){
 	//VARIABLES DE SESION
 	$mail				=	$_SESSION['email'];
 	$nombre				=	$_SESSION['nombre'];
-	$apellidos			=	utf8_encode($_SESSION['apellidos']);
+	$apellidos			=	$_SESSION['apellidos'];
 	$fecha_creacion		=	$_SESSION['fecha_creacion'];
 	$perfil_usuario		=	$_SESSION['perfil_usuario'];
 	
@@ -72,7 +71,8 @@ if(!$_SESSION){
 					<div>Opciones para los administradores
 						
 						<ul>
-							<li><a href="modificar/modificar.php">Actualizar usuario</a></li>
+							<li><a href="modificar/filtrar.php">Actualizar usuario</a></li>
+							<li><a href="registro/registro.php">Crear un nuevo usuario</a></li>
 						</ul>
 						
 						</div><hr/>

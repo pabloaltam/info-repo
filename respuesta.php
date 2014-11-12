@@ -24,11 +24,11 @@ $fila=mysqli_fetch_array($resultado);
 	self.location = "index.html"
 	</script>'; 
 	}else{
-	$_SESSION['email']=$fila['email'];
-	$_SESSION['nombre']=$fila['nombre'];
+	$_SESSION['email']=utf8_encode($fila['email']);
+	$_SESSION['nombre']=utf8_encode($fila['nombre']);
 	$_SESSION['apellidos']=utf8_encode($fila['apellido']);
-	$_SESSION['fecha_creacion']=$fila['fecha_creacion'];
-	$_SESSION['perfil_usuario']=$fila['perfil_usuario'];
+	$_SESSION['fecha_creacion']=utf8_encode($fila['fecha_creacion']);
+	$_SESSION['perfil_usuario']=utf8_encode($fila['perfil_usuario']);
 
 		header("Location: home.php");
 	}

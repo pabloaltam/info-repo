@@ -21,6 +21,14 @@
 		<link rel="stylesheet" href="../style.css" />
 	</head>
 	<body>
+		<nav>
+				<p>
+					<a href="../home.php">Home</a>
+				</p>
+				<p>
+					<a href="contacto.html">Contact</a>
+				</p>
+			</nav>
 		<form action="filtrar.php" method="post" target="_self">
 			<label for="txt_busqueda">Filtrar :</label>
 			<input type="search" name="txt_busqueda"  id="txt_busqueda" />
@@ -42,15 +50,16 @@
 
 		 	if($cantidad > 0){ ?>
 				
-				<table border="4" cellpadding="5px" cellspacing="5px">
-				<tr>
-					<th>Email</th><th>Nombre</th>
+				<table border="4" cellpadding="5px" cellspacing="5px" >
+				<tr align="left">
+					<th >Nombre</th><th>Email</th><th>Fecha de creación</th>
 				</tr>
 				<?php
 				foreach($resultado as $a){ ?>
-				<tr cellpadding="5px" cellspacing="5px">
+				<tr cellpadding="5px" cellspacing="5px" align="left">
+					<td><?php echo utf8_encode($a[1])." ".utf8_encode($a[2])?></td>
 					<td ><a href="modificar.php?email=<?php echo $a[0]; ?>"><?php echo $a[0]?></a></td>
-					<td><?php echo $a[1]?></td>
+					<td><?php echo $a[3];  ?></td>
 				</tr>
 				<?php
 				}

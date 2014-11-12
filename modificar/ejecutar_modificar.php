@@ -4,10 +4,10 @@ date_default_timezone_set("America/Santiago");
 require_once('../operaciones/clase-operaciones.php'); 
 $obj_usuario= new usuarios();
 
-	$nombre 		= $_POST['txt_nombre'];
-	$apellido		=	$_POST['txt_apellido'];
-	$email			=	$_POST['hd_mail'];
-	$perfilUsuario	= $_POST['radio'];
+	$nombre 		= utf8_decode($_POST['txt_nombre']);
+	$apellido		=	utf8_decode($_POST['txt_apellido']);
+	$email			=	utf8_decode($_POST['hd_mail']);
+	$perfilUsuario	= utf8_decode($_POST['radio']);
 
 try{
 	$obj_usuario->actualizarUsuario($email, $nombre, $apellido, $perfilUsuario);

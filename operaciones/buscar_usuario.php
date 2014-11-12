@@ -17,7 +17,7 @@ class Usuario
 		/* Pasar resultados a un arreglo */
 		$i=0;
 		while($fila = $resultado->fetch_assoc()){
-			$arreglo[$i] = array($fila['email'],$fila['nombre']);
+			$arreglo[$i] = array($fila['email'],$fila['nombre'],$fila['apellido'],$fila['fecha_creacion']);
 			$i++;
 		}	
 		return $arreglo;
