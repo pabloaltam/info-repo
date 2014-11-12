@@ -13,7 +13,7 @@ class usuarios{
 		/*Aqui se debe incluir la conexion a la base de datos*/
 		require_once('../conexion/conexion.php');
 		
-		$agregar_usuario = "INSERT INTO `u332152429_info`.`usuarios`
+		$agregar_usuario = "INSERT INTO `usuarios`
 			 (`email`, `nombre`, `apellido`,`fecha_creacion`, `password`, `perfil_usuario`) 
 		VALUES 
 			('$email', '$nombre', '$apellido',NOW(), '$contraseña', '$perfilUsuario');"; 

@@ -3,7 +3,7 @@ ini_set("display_errors",1);
 date_default_timezone_set("America/Santiago");
 //*******PAGINA DE PASO***********************//
 
-require_once('/conexion/conexion.php');
+require_once('conexion/conexion.php');
 
 //*******************************************//
 if(!isset($_SESSION)){
