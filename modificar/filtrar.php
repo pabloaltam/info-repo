@@ -35,6 +35,7 @@ if(!$_SESSION and $perfil_usuario!="admin"){
 	<head>
 		<meta charset="UTF-8"  />
 		<title> Filtro </title>
+		<link rel="shortcut icon" href="../img/favicon.ico">
 		<meta name="description" content="Esta es una pagina para filtrar los usuarios a modificar" />
 	</head>
 	<body>

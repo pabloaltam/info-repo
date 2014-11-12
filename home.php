@@ -36,7 +36,7 @@ if(!$_SESSION){
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	</head>
 
@@ -68,14 +68,20 @@ if(!$_SESSION){
 				
 				if ($perfil_usuario=="admin") {
 					?>
-					<div>Opciones para los administradores
+					<fieldset id="" class="">
+					  <legend>Opciones para los administradores</legend>
+											 
+					
+					<div>
 						
 						<ul>
 							<li><a href="modificar/filtrar.php">Actualizar usuario</a></li>
 							<li><a href="registro/registro.php">Crear un nuevo usuario</a></li>
 						</ul>
 						
-						</div><hr/>
+						</div>
+						</fieldset>
+						<hr/>
 					<?php 
 				} else {
 					
