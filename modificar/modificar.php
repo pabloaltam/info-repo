@@ -14,7 +14,7 @@ ini_set("display_errors",1);
 date_default_timezone_set("America/Santiago");
 //*******PAGINA DE PASO***********************//
 
-$email=$_GET['email'];
+$email=$_POST['email'];
 
 require_once('../conexion/conexion.php');
 
@@ -27,6 +27,18 @@ require_once('../conexion/conexion.php');
 </head>
 
 <body>
+	<header>
+		<h1 id="">Modificar a: <?php echo $email; ?></h1>
+	</header>
+	
+		<nav>
+				<p>
+					<a href="../home.php">Home</a>
+				</p>
+				<p>
+					<a href="../contacto.html">Contact</a>
+				</p>
+			</nav>
 <form id="form1" name="form1" method="post" action="ejecutar_modificar.php">
 <?php 
 
