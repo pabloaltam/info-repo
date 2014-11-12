@@ -1,4 +1,23 @@
 <?php 
+
+session_start();
+$perfil_usuario=$_SESSION['perfil_usuario'];
+if(!$_SESSION and $perfil_usuario!="admin"){
+	echo '<script languaje=javascript>
+	alert("usuario no autentificado")
+	self.location="../index.html"
+	</script>';
+}elseif ($perfil_usuario!=="admin") {
+	
+	echo '<script languaje=javascript>
+	alert("No tienes permisos para agregar usuarios...")
+	self.location="../home.php"
+	</script>';
+		
+	} else {
+		
+	
+	
 ini_set("display_errors",1); 
 date_default_timezone_set("America/Santiago");
 require_once('../operaciones/clase-operaciones.php'); 
@@ -28,8 +47,20 @@ catch(Exception $e){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento sin título</title>
 </head>
-<a href="filtrar.php">Continuar </a>
 <body>
-	<h1>Hola :D</h1>
+	<header>
+		<h1 id="">Modificardo exitosamente</h1>
+	</header>
+	
+		<nav>
+				<p>
+					<a href="../home.php">Home</a>
+				</p>
+				<p>
+					<a href="../contacto.html">Contact</a>
+				</p>
+			</nav>
+<a href="filtrar.php">Continuar </a>
 </body>
 </html>
+<?php }  ?>

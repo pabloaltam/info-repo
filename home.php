@@ -7,7 +7,7 @@ if(!$_SESSION){
 	alert("usuario no autentificado")
 	self.location="index.html"
 	</script>';
-}
+}else{
 
 	//VARIABLES DE SESION
 	$mail				=	$_SESSION['email'];
@@ -95,3 +95,4 @@ if(!$_SESSION){
 		</div>
 	</body>
 </html>
+<?php }  ?>

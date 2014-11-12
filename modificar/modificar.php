@@ -1,15 +1,24 @@
 <?php
-/*
-session_start();
 
-if(!$_SESSION){
+session_start();
+$perfil_usuario=$_SESSION['perfil_usuario'];
+if(!$_SESSION and $perfil_usuario!="admin"){
 	echo '<script languaje=javascript>
 	alert("usuario no autentificado")
 	self.location="../index.html"
 	</script>';
-}
- * 
- */
+} elseif ($perfil_usuario!=="admin") {
+	
+	echo '<script languaje=javascript>
+	alert("No tienes permisos para agregar usuarios...")
+	self.location="../home.php"
+	</script>';
+		
+	} else {
+		
+	
+	
+
 ini_set("display_errors",1);
 date_default_timezone_set("America/Santiago");
 //*******PAGINA DE PASO***********************//
@@ -47,6 +56,8 @@ $resultado=mysqli_query($conex ,$consulta) or die (mysql_error());
 $fila=mysqli_fetch_array($resultado);
 //******************************************** 
 		?>
+		<fieldset>
+			<legend>Modificar</legend>
 		<table width="70%" border="1">
   <tr>
     <td>Nombre</td>
@@ -86,7 +97,9 @@ $fila=mysqli_fetch_array($resultado);
     <td><input type="submit" name="btn_enviar" id="btn_enviar" value="Modificar" /></td>
   </tr>
 </table>
+</fieldset>
 <input type="hidden" value="<?php echo $email;  ?>" id="hd_mail" name="hd_mail"/>
 </form>
 </body>
 </html>
+<?php }  ?>
