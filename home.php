@@ -69,7 +69,13 @@ if(!$_SESSION){
 				
 				if ($perfil_usuario=="admin") {
 					?>
-					<div>Opciones para los administradores</div><hr/>
+					<div>Opciones para los administradores
+						
+						<ul>
+							<li><a href="modificar/modificar.php">Actualizar usuario</a></li>
+						</ul>
+						
+						</div><hr/>
 					<?php 
 				} else {
 					

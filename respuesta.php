@@ -26,7 +26,7 @@ $fila=mysqli_fetch_array($resultado);
 	}else{
 	$_SESSION['email']=$fila['email'];
 	$_SESSION['nombre']=$fila['nombre'];
-	$_SESSION['apellidos']=$fila['apellido'];
+	$_SESSION['apellidos']=utf8_encode($fila['apellido']);
 	$_SESSION['fecha_creacion']=$fila['fecha_creacion'];
 	$_SESSION['perfil_usuario']=$fila['perfil_usuario'];
 

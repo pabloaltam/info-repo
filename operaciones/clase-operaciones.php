@@ -21,6 +21,14 @@ class usuarios{
 			 //*Cadena sql para ingresar usuario*/
 		$resultado_agregar = $conex->query($agregar_usuario);
 		}
+	function actualizarUsuario($email,$nombre,$apellido,$perfilUsuario)
+	{
+		$sqlActualizar="UPDATE `usuarios` SET `nombre` = '$nombre', `apellido` = '$apellido', `perfil_usuario` = '$perfilUsuario' WHERE `email` = '$email';";
+		date_default_timezone_set("America/Santiago");
+		require_once ('../conexion/conexion.php');
+		
+		$resultado_actualizar = $conex -> query($sqlActualizar);
+	}
 	
 	}
 
