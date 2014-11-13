@@ -1,7 +1,5 @@
 html,
 body,
-div,
-span,
 object,
 iframe,
 h1,
@@ -144,19 +142,25 @@ p {
     line-height: 1.5em;
     margin-bottom: 1.5em;
 }
-#container,
-.inner { margin: 0 auto }
-header {
-    background: #005EA7 
+#textbox {
+ background-color: ;
 }
-header h1 { margin: 7px 0 0 }
+#container,
+.inner { 
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+header {
+    background: #005EA7; 
+}
+header h1 { margin: 4px 0 0 }
 #container {
     clear: both;
     padding-top: 20px;
 }
 .alt {
-    color: rgba(255,255,255,0.9);
-    letter-spacing: .05em;
+    color: rgba(255,255,255,0.9)
 }
 nav { margin: 7px 0 }
 nav ul {
@@ -176,7 +180,7 @@ nav a {
     display: block;
     background-color: rgba(255,255,255,0.1);
     margin: 0 0 0 4%;
-    padding: 7px 0 7px 5%;
+    padding: 4px 0 4px 5%;
 }
 .cf:before,
 .cf:after {

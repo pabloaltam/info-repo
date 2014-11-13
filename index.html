@@ -13,6 +13,7 @@
  	<link rel="stylesheet" href="style.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+<link rel="stylesheet" href="fawesome/css/font-awesome.min.css">
 
 </head>
 
@@ -23,9 +24,9 @@
   		<h1 class="alt span8">INFORED</h1>
   	<nav class="span4 col">
 			<ul class="cf">
-				<li><a class="alt" href="#">Inicio</a></li>
-				<li><a class="alt" href="#">Acerca</a></li>
-				<li><a class="alt" href="#">Contacto</a></li>
+                <li><a class="alt" href="#">Inicio</a></li>
+				<li><a class="alt" href="#">Nosotros</a></li>
+				<li><a class="alt" href="#">Contacto</a></li>        
 			</ul>
 		</nav>
 	</div>
@@ -50,30 +51,53 @@
         </section>
 			</article>
 
-			<aside class="span4 col">
-					<h2>Mision</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-			
-          <h2>Vision</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-          
-			</aside>
-
-  </div>
-  <!--
-  	Formulario de inicio de sesion
-  	-->
-  <div>
+      <aside class="span4 col">
+          <div id="textbox">
   	<form  action="respuesta.php" method="post">
 		
 		<h1 id="titulo">
-			Inicio de sesión:
+			Inicio de sesión
 		</h1>
 			<table>
 				<tbody>
 					<tr>
 						<td><label for="email">Email:</label></td>
-						<td><input type="email" name="email" id="email" title="ingrese EMAIL" placeholder="Ejemplo@ejemplo.com" /></td>
+						<td><input type="email" name="email" id="email" title="ingrese EMAIL" placeholder="tu@email.com" /></td>
+					</tr>
+					
+					<tr>
+						<td><label for="password">Password:</label></td>
+						<td><input type="password" name="password" id="password" title="ingrese password" placeholder="password"/></td>
+					</tr>
+					
+					<tr colspan="2">
+						<td ><input type="submit" value="Entrar" title="Iniciar sesión"/></td>
+						
+					</tr>
+				</tbody>
+			</table>			
+		</form>
+          </div>
+
+          
+          
+      </aside>
+			
+
+  </div>
+  <!--
+  	Formulario de inicio de sesion
+  <div id="container">
+  	<form  action="respuesta.php" method="post">
+		
+		<h1 id="titulo">
+			Inicio de sesión
+		</h1>
+			<table>
+				<tbody>
+					<tr>
+						<td><label for="email">Email:</label></td>
+						<td><input type="email" name="email" id="email" title="ingrese EMAIL" placeholder="tu@email.com" /></td>
 					</tr>
 					
 					<tr>
