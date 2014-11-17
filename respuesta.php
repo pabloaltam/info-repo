@@ -30,6 +30,6 @@ $fila=mysqli_fetch_array($resultado);
 	$_SESSION['fecha_creacion']=utf8_encode($fila['fecha_creacion']);
 	$_SESSION['perfil_usuario']=utf8_encode($fila['perfil_usuario']);
 
-		header("Location: home.php");
+		header("Location: usuario.php");
 	}
 	  ?>

@@ -45,14 +45,11 @@ if(!$_SESSION and $perfil_usuario!="admin"){
 		
 		<nav>
 				<p>
-					<a href="../home.php">Home</a>
-				</p>
-				<p>
-					<a href="../contacto.html">Contact</a>
+					<a href="../index.html">Inicio</a>
 				</p>
 			</nav>
 		<form action="filtrar.php" method="post" target="_self">
-			<label for="txt_busqueda">Filtrar :</label>
+			<label for="txt_busqueda">Filtrar:</label>
 			<input type="search" name="txt_busqueda"  id="txt_busqueda" />
 			<input type="submit" name="btn_enviar" value="Buscar" id="btn_enviar"/>
 		</form>	

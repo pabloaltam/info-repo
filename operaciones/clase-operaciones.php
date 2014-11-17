@@ -19,7 +19,7 @@ class usuarios{
 			('$email', '$nombre', '$apellido',NOW(), '$contraseña', '$perfilUsuario');"; 
 			 
 			 //*Cadena sql para ingresar usuario*/
-			$resultado_agregar = mysql_query($conex,$agregar_usuario);
+		$resultado_agregar = $conex->query($agregar_usuario);
 		}
 	function actualizarUsuario($email,$nombre,$apellido,$perfilUsuario)
 	{
