@@ -1,130 +1,101 @@
-<!doctype html>  
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  
-  <title>INFORED WEBSITE</title>
-<link rel="shortcut icon" href="img/favicon.ico">
- 	<link rel="stylesheet" href="style.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
-<link rel="stylesheet" href="fawesome/css/font-awesome.min.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/favicon.ico">
 
-</head>
+    <title>INFORED Website</title>
 
-<body class="cf">
+  </head>
 
-  <header class="span12">
-  	<div class="inner cf">
-  		<h1 class="alt span8">INFORED</h1>
-  	<nav class="span4 col">
-			<ul class="cf">
-                <li><a class="alt" href="#">Inicio</a></li>
-				<li><a class="alt" href="#">Nosotros</a></li>
-				<li><a class="alt" href="#">Contacto</a></li>        
-			</ul>
-		</nav>
-	</div>
-  </header>
-
-  <div id="container" class="cf">  
-
-  	<article class="span8">
-				<section>
-          <h1>Noticias</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-        </section>
-        <section>
-          <h2>Últimos Cambios</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-        </section>
-        <section>
-          <h2>Lo que se viene</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-        </section>
-			</article>
-
-      <aside class="span4 col">
-          <div id="textbox">
-  	<form  action="respuesta.php" method="post">
-		
-		<h1 id="titulo">
-			Inicio de sesión
-		</h1>
-			<table>
-				<tbody>
-					<tr>
-						<td><label for="email">Email:</label></td>
-						<td><input type="email" name="email" id="email" title="ingrese EMAIL" placeholder="tu@email.com" /></td>
-					</tr>
-					
-					<tr>
-						<td><label for="password">Password:</label></td>
-						<td><input type="password" name="password" id="password" title="ingrese password" placeholder="password"/></td>
-					</tr>
-					
-					<tr colspan="2">
-						<td ><input type="submit" value="Entrar" title="Iniciar sesión"/></td>
-						
-					</tr>
-				</tbody>
-			</table >			
-		</form>
-          </div>
+  <body>
+      <div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Navegación móvil</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Infored Website</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+             <li><a href="/index.html">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="http://infored.misotec.com/foro" target="_blank">Foro</a></li>
+            <li><a href="#">Comunicados</a></li>
+          </ul>
           
-          <br>
-          <br>
-          <!-- start feedwind code --><script type="text/javascript">document.write('<script type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js"><' + '/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "https://github.com/sarqo/info-repo/commits/master.atom",rssmikle_frame_width: "300",rssmikle_frame_height: "400",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "on",autoscroll: "off",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "New",rssmikle_title: "on",rssmikle_title_sentence: "Últimos cambios en la web",rssmikle_title_link: "https://github.com/sarqo/info-repo",rssmikle_title_bgcolor: "#0066FF",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#0066FF",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M:%S %p",item_description_style: "text",item_thumbnail: "full",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script><div style="font-size:10px; text-align:center; width:300;"><!--Please display the above link in your web page according to Terms of Service.--></div><!-- end feedwind code -->
+        </div><!--/.nav-collapse -->
+    </nav>
+        
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12">
+                    <h2>Noticias</h2>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                        <h2>Comunicados</h2>
+                <p>HOLAM</p>
+                    
+                    </div>
+            
+        </div>
+            </div>
+             <div class="col-md-4">
+                <div class="panel panel-default">
+                      	<form  action="respuesta.php" method="post">
 
-          
-          
-      </aside>
-			
-
-  </div>
-  <!--
-  	Formulario de inicio de sesion
-  <div id="container">
-  	<form  action="respuesta.php" method="post">
-		
-		<h1 id="titulo">
-			Inicio de sesión
-		</h1>
-			<table>
-				<tbody>
-					<tr>
-						<td><label for="email">Email:</label></td>
-						<td><input type="email" name="email" id="email" title="ingrese EMAIL" placeholder="tu@email.com" /></td>
-					</tr>
-					
-					<tr>
-						<td><label for="password">Password:</label></td>
-						<td><input type="password" name="password" id="password" title="ingrese password" placeholder="password"/></td>
-					</tr>
-					
-					<tr colspan="2">
-						<td ><input type="submit" value="Entrar" title="Iniciar sesión"/></td>
-						
-					</tr>
-				</tbody>
-			</table>			
-		</form>
-  </div>
-  <!--
-  	Formulario de inicio de sesion
-  	-->
-   <!--! end of #container -->
-
-  <footer>
+  <div class="panel-heading">Inicio de sesión</div>
+  <div class="panel-body">
+    <div class="input-group margin-bottom-sm">
     
-  </footer>
-</body>
+                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="tu@correo.com">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                    <input class="form-control" type="password" name="password" id="email" placeholder="password">
+                
+                </div>
+      <div class="text-right">
+          <button type="submit" class="btn btn-success">
+        <i class="fa fa-chevron-right"></i>Entrar</a>
+      </div>
+  </div>
+                    </form>
+</div>  
+                 <div class="panel panel-default">
+  <div class="panel-heading">Últimos cambios en el website</div>
+  <div class="panel-body">
+<!-- start feedwind code --><script type="text/javascript">document.write('<script type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js"><' + '/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "https://github.com/sarqo/info-repo/commits/master.atom",rssmikle_frame_width: "300",rssmikle_frame_height: "220",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "on",autoscroll: "on",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "New",rssmikle_title: "off",rssmikle_title_sentence: "",rssmikle_title_link: "",rssmikle_title_bgcolor: "#0066FF",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#2C3E50",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M:%S %p",item_description_style: "text",item_thumbnail: "full",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script><div style="font-size:10px; text-align:center; width:300;"><a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!-- end feedwind code -->
+  </div>
+</div>       
+                 
+</div>
+                     
+        </div>
+            
+            
+        </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cssi/estilo.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  </body>
 </html>
-
