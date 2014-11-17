@@ -71,6 +71,11 @@ if(!$_SESSION){
      <label for="rdn_administrador">Administrador</label></td>
   </tr>
   <tr>
+    <td>Contraseña Maestra</td>
+    <td><label for="txt_contraseñaMaestra"></label>
+      <input type="password" name="txt_contraseñaMaestra" id="txt_contraseñaMaestra" /></td>
+  </tr>
+  <tr>
     <td>&nbsp;</td>
     <td><input type="submit" name="btn_enviar" id="btn_enviar" value="Enviar" /></td>
   </tr>
