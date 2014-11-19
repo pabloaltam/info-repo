@@ -67,7 +67,30 @@ if(!$_SESSION){
                     <div class="bs-example">
     <div class="panel panel-default">
       <!-- Default panel contents -->
-        <div class="panel-heading"><h3>Bienvenido, <?php echo "$nombre"." $apellidos";?>. </h3></div>
+        <div class="panel-heading"><h3>Bienvenido, <?php echo "$nombre"." $apellidos";?>. </h3>
+<a class="btn btn-xs btn-primary" href="index.html">
+          <i class="fa fa-home fa-lg"></i> Inicio</a>
+            
+            
+            <?php 
+				
+				if ($perfil_usuario=="admin") {
+					?>
+
+							<a class="btn btn-xs btn-primary" href="registro/registro.php"><i class="fa fa-plus-square fa-lg"></i> Agregar usuario</a>
+							<a class="btn btn-xs btn-primary" href="modificar/modificar.php"><i class="fa fa-refresh fa-lg"></i> Modificar usuario</a>
+					<?php 
+				} else {
+					
+				}
+				
+				 ?>
+            
+            <a class="btn btn-xs btn-primary" href="desconectar.php">
+          <i class="fa fa-sign-out fa-lg"></i> Cerrar sesión</a>
+        
+        </div>
+                    
 
       <!-- Table -->
       <table class="table">
@@ -90,36 +113,6 @@ if(!$_SESSION){
       </table>
     </div>
   </div>    
-                        <ul>
-							<li><a href="index.html">Volver a inicio</a></li>
-						</ul>
-				<hr/>
-				<?php 
-				
-				if ($perfil_usuario=="admin") {
-					?>
-					<fieldset id="" class="">
-					  <legend>Panel de administrador</legend>
-											 
-					
-					<div>
-						
-						<ul>
-							<li><a href="modificar/filtrar.php">Actualizar usuario</a></li>
-							<li><a href="registro/registro.php">Crear un nuevo usuario</a></li>
-						</ul>
-						
-						</div>
-						</fieldset>
-						<hr/>
-					<?php 
-				} else {
-					
-				}
-				
-				 ?>
-                        <a href="desconectar.php">Cerrar sesi&oacute;n</a>
-            
         </div>
                 
             </div>
