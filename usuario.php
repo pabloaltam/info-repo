@@ -78,7 +78,7 @@ if(!$_SESSION){
 					?>
 
 							<a class="btn btn-xs btn-primary" href="registro/registro.php"><i class="fa fa-plus-square fa-lg"></i> Agregar usuario</a>
-							<a class="btn btn-xs btn-primary" href="modificar/modificar.php"><i class="fa fa-refresh fa-lg"></i> Modificar usuario</a>
+							<a class="btn btn-xs btn-primary" href="modificar/filtrar.php"><i class="fa fa-refresh fa-lg"></i> Modificar usuario</a>
 					<?php 
 				} else {
 					
