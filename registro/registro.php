@@ -70,6 +70,8 @@ if(!$_SESSION){
 <a class="btn btn-xs btn-primary" href="../index.html">
           <i class="fa fa-home fa-lg"></i> Inicio</a>
             
+            <a class="btn btn-xs btn-primary" href="../usuario.php">
+          <i class="fa fa-user fa-lg"></i> Panel</a>
             
             <?php 
 				
