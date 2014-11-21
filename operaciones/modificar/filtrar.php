@@ -5,13 +5,13 @@ $perfil_usuario=$_SESSION['perfil_usuario'];
 if(!$_SESSION and $perfil_usuario!="admin"){
 	echo '<script languaje=javascript>
 	alert("usuario no autentificado")
-	self.location="../index.html"
+	self.location="/index.php"
 	</script>';
 }elseif ($perfil_usuario!=="admin") {
 	
 	echo '<script languaje=javascript>
 	alert("No tienes permisos para agregar usuarios...")
-	self.location="../home.php"
+	self.location="/home.php"
 	</script>';
 		
 	} else {
@@ -19,35 +19,15 @@ if(!$_SESSION and $perfil_usuario!="admin"){
 	
 	date_default_timezone_set("America/Santiago");
 
-	ini_set("display_errors",1);
-	include_once ('../operaciones/buscar_usuario.php');
+	ini_set("display_errors",0);
+	include_once ('buscar_usuario.php');
 	
 	$obj_Usuario= new Usuario();
 	
 
  ?>
- 
-
- 
-<!DOCTYPE HTML>
-<html lang="es">
-	
-	<head>
-		<meta charset="UTF-8"  />
-		<title> Filtro </title>
-		<link rel="shortcut icon" href="../img/favicon.ico">
-		<meta name="description" content="Esta es una pagina para filtrar los usuarios a modificar" />
-	</head>
-	<body>
-		<header>
-			<h1 id="">Filtro de usuarios</h1>
-		</header>
-		
-		<nav>
-				<p>
-					<a href="../index.html">Inicio</a>
-				</p>
-			</nav>
+                <fieldset>
+                  <legend>Filtro de Usuarios</legend>
 		<form action="filtrar.php" method="post" target="_self">
 			<label for="txt_busqueda">Filtrar:</label>
 			<input type="search" name="txt_busqueda"  id="txt_busqueda" />
@@ -97,8 +77,5 @@ if(!$_SESSION and $perfil_usuario!="admin"){
 			}
 		}
 		 ?>
-		
-	</body>
-	
-</html>
 <?php }  ?>
+</fieldset>

@@ -1,25 +1,4 @@
-<?php
-//Iniciar sesion
-session_start();
-//Validar si se esta ingresando con sesion correctamente
-if(!$_SESSION){
-	echo '<script languaje=javascript>
-	alert("usuario no autentificado")
-	self.location="index.html"
-	</script>';
-}else{
-
-	//VARIABLES DE SESION
-	$mail				=	$_SESSION['email'];
-	$nombre				=	$_SESSION['nombre'];
-	$apellidos			=	$_SESSION['apellidos'];
-	$fecha_creacion		=	$_SESSION['fecha_creacion'];
-	$perfil_usuario		=	$_SESSION['perfil_usuario'];
-	
-?>
-
-
-
+<?php require 'include/session.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -32,27 +11,15 @@ if(!$_SESSION){
 		<title>Home</title>
 		<meta name="description" content="Pagina de perfil de los usuarios de infored.">
 		<meta name="author" content="Victor">
-
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="img/favicon.ico">
+		<!-- Replace apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	</head>
 
 	<body>
 		<div>
-			<header>
-				<h1>Home</h1>
-			</header>
-			<nav>
-				<p>
-					<a href="home.php">Home</a>
-				</p>
-				<p>
-					<a href="contacto.html">Contact</a>
-				</p>
-			</nav>
+    <?php require 'include/menu.php'; ?>
 
 			<div>
 				<table border="1" cellspacing="5" cellpadding="5">
@@ -75,8 +42,8 @@ if(!$_SESSION){
 					<div>
 						
 						<ul>
-							<li><a href="modificar/filtrar.php">Actualizar usuario</a></li>
-							<li><a href="registro/registro.php">Crear un nuevo usuario</a></li>
+							<li><a href="operaciones/modificar/filtrar.php">Actualizar usuario</a></li>
+							<li><a href="operaciones/registro/registro.php">Crear un nuevo usuario</a></li>
 						</ul>
 						
 						</div>
@@ -96,9 +63,7 @@ if(!$_SESSION){
 					&copy; Copyright  by infored
 					
 				</p>
-				<a href="desconectar.php">Cerrar sesi&oacute;n</a>
+				<a href="operaciones/desconectar.php">Cerrar sesi&oacute;n</a>
 			</footer>
 		</div>
-	</body>
-</html>
-<?php }  ?>
+    <?php require 'include/pie.php'; ?>

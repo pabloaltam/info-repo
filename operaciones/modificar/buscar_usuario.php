@@ -7,7 +7,7 @@ class Usuario
 		$v_email = $email;
 		date_default_timezone_set("America/Santiago");
 		/* conexion a la base de datos */
-		include('../conexion/conexion.php');
+		include('../../include/conexion.php');
 	
 		/* consulta SQL */
 		$busca_usuario = "select * from usuarios where email like '%$v_email%'";

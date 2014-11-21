@@ -1,9 +1,9 @@
 <?php 
+require '../../include/conexion.php'; 
 class usuarios{
 		
 	function agregarUsuarios($nombre,$apellido,$email,$contraseña,$perfilUsuario){
-		/*Se crean las variables con los datos que vienen desde 
-		  ejecutar-ingreso.php*/
+		/*Se crean las variables con los datos que vienen desde ejecutar-ingreso.php*/
 		$nuevo_nombre 			= $nombre;
 		$nuevo_apellido 		= $apellido;
 		$nuevo_email			= $email;
@@ -11,7 +11,6 @@ class usuarios{
 		$nuevo_perfilUsuario	= $perfilUsuario; 
 		
 		/*Aqui se debe incluir la conexion a la base de datos*/
-		require_once('../conexion/conexion.php');
 		$obj_conectar=new Conectar();
 		$agregar_usuario = "INSERT INTO `usuarios`
 			 (`email`, `nombre`, `apellido`,`fecha_creacion`, `password`, `perfil_usuario`) 
@@ -25,7 +24,6 @@ class usuarios{
 	{
 		$sqlActualizar="UPDATE `usuarios` SET `nombre` = '$nombre', `apellido` = '$apellido', `perfil_usuario` = '$perfilUsuario' WHERE `email` = '$email';";
 		date_default_timezone_set("America/Santiago");
-		require_once ('../conexion/conexion.php');
 		$obj_conectar=new Conectar();
 		$resultado_actualizar = $obj_conectar->conectar()-> query($sqlActualizar);
 	}
