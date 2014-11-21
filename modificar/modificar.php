@@ -51,9 +51,9 @@ require_once('../conexion/conexion.php');
 			</nav>
 <form id="form1" name="form1" method="post" action="ejecutar_modificar.php">
 <?php 
-
+$obj_conectar= new Conectar();
 $consulta="SELECT * FROM usuarios WHERE email='$email'";
-$resultado=mysqli_query($conex ,$consulta) or die (mysql_error());
+$resultado=mysqli_query($obj_conectar->conectar() ,$consulta) or die (mysql_error());
 $fila=mysqli_fetch_array($resultado);
 //******************************************** 
 		?>

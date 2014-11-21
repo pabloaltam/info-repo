@@ -50,7 +50,7 @@ catch(Exception $e){
 </head>
 <body>
 	<header>
-		<h1 id="">Modificardo exitosamente</h1>
+		<h1 id="">Modificado exitosamente</h1>
 	</header>
 	
 		<nav>

@@ -12,9 +12,9 @@ if(!isset($_SESSION)){
 
 	$nom = $_POST['email'];
 	$pass= $_POST['password'];
-
+$obj_conectar = new Conectar();
 $consulta="SELECT * FROM usuarios WHERE email='".$nom."' and password='".$pass."'";
-$resultado=mysqli_query($conex ,$consulta) or die (mysql_error());
+$resultado=mysqli_query($obj_conectar->conectar() ,$consulta) or die (mysql_error());
 $fila=mysqli_fetch_array($resultado);
 //******************************************** 
     

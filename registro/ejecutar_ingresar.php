@@ -12,7 +12,7 @@ $obj_usuario= new usuarios();
 
 try{
 	$obj_usuario->agregarUsuarios($nombre,$apellido,$email,$contraseña,$perfilUsuario);
-	  if($obj_usuario=!0){
+	  if($obj_usuario==true){
 	  	echo "<script>alert('exito!!')</script>";
 	  }else{
 	  	echo "<script>alert('no se ah ingresado')</script>";

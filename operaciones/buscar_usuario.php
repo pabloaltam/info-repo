@@ -11,8 +11,8 @@ class Usuario
 	
 		/* consulta SQL */
 		$busca_usuario = "select * from usuarios where email like '%$v_email%'";
-		
-		$resultado = $conex->query($busca_usuario);
+		$obj_conectar=new Conectar();
+		$resultado = $obj_conectar->conectar()->query($busca_usuario);
 		
 		/* Pasar resultados a un arreglo */
 		$i=0;

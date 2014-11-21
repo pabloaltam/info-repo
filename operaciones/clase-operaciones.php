@@ -12,22 +12,22 @@ class usuarios{
 		
 		/*Aqui se debe incluir la conexion a la base de datos*/
 		require_once('../conexion/conexion.php');
-		
+		$obj_conectar=new Conectar();
 		$agregar_usuario = "INSERT INTO `usuarios`
 			 (`email`, `nombre`, `apellido`,`fecha_creacion`, `password`, `perfil_usuario`) 
 		VALUES 
 			('$email', '$nombre', '$apellido',NOW(), '$contraseña', '$perfilUsuario');"; 
 			 
 			 //*Cadena sql para ingresar usuario*/
-		$resultado_agregar = $conex->query($agregar_usuario);
+		$resultado_agregar = $obj_conectar->conectar()->query($agregar_usuario);
 		}
 	function actualizarUsuario($email,$nombre,$apellido,$perfilUsuario)
 	{
 		$sqlActualizar="UPDATE `usuarios` SET `nombre` = '$nombre', `apellido` = '$apellido', `perfil_usuario` = '$perfilUsuario' WHERE `email` = '$email';";
 		date_default_timezone_set("America/Santiago");
 		require_once ('../conexion/conexion.php');
-		
-		$resultado_actualizar = $conex -> query($sqlActualizar);
+		$obj_conectar=new Conectar();
+		$resultado_actualizar = $obj_conectar->conectar()-> query($sqlActualizar);
 	}
 	
 	}
