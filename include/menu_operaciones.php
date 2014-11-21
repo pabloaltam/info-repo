@@ -17,7 +17,7 @@
 				
 				 ?>
             
-            <a class="btn btn-xs btn-primary" href="/operaciones/desconectar.php">
+            <a onClick="return confirm('Esta Seguro que desea Cerrar Sesión?')" class="btn btn-xs btn-primary" href="/operaciones/desconectar.php">
           <i class="fa fa-sign-out fa-lg"></i> Cerrar sesión</a>
         
         </div>
