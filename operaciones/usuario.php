@@ -29,6 +29,7 @@
                     
 
       <!-- Table -->
+       <div class="well bs-component">
       <table class="table">
         <thead>
         </thead>
@@ -48,6 +49,7 @@
         </tbody>
       </table>
     </div>
+      </div>
   </div>    
         </div>
                 
