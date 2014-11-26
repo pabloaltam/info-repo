@@ -3,7 +3,7 @@ if (\basename($_SERVER["SCRIPT_FILENAME"], '.php') == 'conexion') { echo '<scrip
  class Conectar {
 
     function conectar() {
-        $conex = mysqli_connect("localhost", "root", "inacap.2014", "inforeddb");
+        $conex = mysqli_connect("db4free.net","inforeduser","inforedpass","inforeddb");
         if ($conex->connect_errno) {
             echo "Fallo al conectar a MySQL: (" . $conex->connect_errno . ") " . $conex->connect_error;
         }
