@@ -1,4 +1,5 @@
 <?php
+if (\basename($_SERVER["SCRIPT_FILENAME"], '.php') == 'clase_buscar_usuario') { echo '<script>alert("Que intentas hacer?");self.location="/index.php"</script>';die();}
 class Usuario
 {
 	function buscarUsuario($email)
@@ -23,4 +24,4 @@ class Usuario
 		return $arreglo;
 	}
 }
-;?>
+?>

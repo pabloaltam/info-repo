@@ -1,26 +1,10 @@
 <?php 
+require('../../include/session.php');
 
-	session_start();
-$perfil_usuario=$_SESSION['perfil_usuario'];
-if(!$_SESSION and $perfil_usuario!="admin"){
-	echo '<script languaje=javascript>
-	alert("usuario no autentificado")
-	self.location="/index.php"
-	</script>';
-}elseif ($perfil_usuario!=="admin") {
-	
-	echo '<script languaje=javascript>
-	alert("No tienes permisos para agregar usuarios...")
-	self.location="/home.php"
-	</script>';
-		
-	} else {
-		
-	
 	date_default_timezone_set("America/Santiago");
 
 	ini_set("display_errors",0);
-	include_once ('buscar_usuario.php');
+	require ('clase_buscar_usuario.php');
 	
 	$obj_Usuario= new Usuario();
 	
@@ -77,5 +61,4 @@ if(!$_SESSION and $perfil_usuario!="admin"){
 			}
 		}
 		 ?>
-<?php }  ?>
 </fieldset>

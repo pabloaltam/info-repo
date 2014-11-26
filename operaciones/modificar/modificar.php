@@ -1,26 +1,12 @@
 <?php
-session_start();
-$perfil_usuario=$_SESSION['perfil_usuario'];
-if(!$_SESSION and $perfil_usuario!="admin"){
-	echo '<script languaje=javascript>
-	alert("usuario no autentificado")
-	self.location="/index.php"
-	</script>';
-} elseif ($perfil_usuario!=="admin") {
-	echo '<script languaje=javascript>
-	alert("No tienes permisos para agregar usuarios...")
-	self.location="/home.php"
-	</script>';
-		
-	} else {
-	
+require('../../include/session.php');
 ini_set("display_errors",0);
 date_default_timezone_set("America/Santiago");
 //*******PAGINA DE PASO***********************//
 
 $email=$_POST['email'];
 
-require_once('../../include/conexion.php');
+require('../../include/conexion.php');
 
 ?>
 
@@ -77,4 +63,3 @@ $fila=mysqli_fetch_array($resultado);
 </fieldset>
 <input type="hidden" value="<?php echo $email;  ?>" id="hd_mail" name="hd_mail"/>
 </form>
-<?php }  ?>

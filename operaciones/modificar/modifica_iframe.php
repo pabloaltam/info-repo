@@ -1,18 +1,5 @@
 <?php
-session_start();
-$perfil_usuario=$_SESSION['perfil_usuario'];
-if(!$_SESSION and $perfil_usuario!="admin"){
-	echo '<script languaje=javascript>
-	alert("usuario no autentificado")
-	self.location="/index.php"
-	</script>';
-} elseif ($perfil_usuario!=="admin") {
-	echo '<script languaje=javascript>
-	alert("No tienes permisos para agregar usuarios...")
-	self.location="/home.php"
-	</script>';
-		
-	} else {
+require('../../include/session.php');
 ?>
 <?php require '../../include/session.php'; ?>
 <!DOCTYPE html>
@@ -48,4 +35,3 @@ if(!$_SESSION and $perfil_usuario!="admin"){
         </div>
       </div> 
 <?php require '../../include/pie.php'; ?>
-<?php }  ?>
